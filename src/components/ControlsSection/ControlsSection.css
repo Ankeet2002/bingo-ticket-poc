@@ -1,0 +1,127 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #111827;
+  border: 1px solid #1f2937;
+}
+
+.controls h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #f9fafb;
+}
+
+.controls__subtitle {
+  margin: 6px 0 0;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.controls__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.controls__label {
+  color: #d1d5db;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.controls__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.controls button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.controls button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.controls button.controls__chip--active {
+  background: #f59e0b;
+  color: #111827;
+}
+
+.controls button.controls__chip--active:hover {
+  background: #d97706;
+}
+
+.controls__betInput {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls__betInput label {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.controls__betInput input {
+  width: 100px;
+  padding: 8px 10px;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  background: #0b1220;
+  color: #f9fafb;
+  font-size: 14px;
+}
+
+.controls__betHint {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.controls__status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.controls__balls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.controls__ball {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #374151;
+  color: #f9fafb;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.controls__ball:last-child {
+  background: #2563eb;
+}

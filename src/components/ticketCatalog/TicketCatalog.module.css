@@ -1,0 +1,58 @@
+.catalogWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.catalog {
+  max-height: 472px;
+  overflow: auto;
+  padding: 6px;
+  border-radius: 16px;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+
+.catalog > * {
+  font-size: initial;
+  line-height: initial;
+}
+
+.empty {
+  padding: 48px 16px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.oneToGo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 28px;
+}
+
+.oneToGoBadge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #1f2937;
+  color: #fbbf24;
+  font-size: 12px;
+  font-weight: 600;
+}
