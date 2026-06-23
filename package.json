@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:structure": "vite --open /ticket-structure.html",
     "build": "vite build",
     "preview": "vite preview"
   },

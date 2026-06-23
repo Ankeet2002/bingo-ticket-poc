@@ -17,6 +17,7 @@ import {
   startNewRound,
   subscribeMockGame,
 } from '../../mock/MockGameController.js'
+import MockTicketPreview from '../ticketStructure/MockTicketPreview.jsx'
 import './ControlsSection.css'
 
 export default function ControlsSection() {
@@ -52,11 +53,14 @@ export default function ControlsSection() {
 
   return (
     <section className="controls">
-      <div className="controls__group">
-        <h1>Ticket Game POC</h1>
-        <p className="controls__subtitle">
-          Round {gameId} · 6 numbers · match-count wins · FLIP sort
-        </p>
+      <div className="controls__top">
+        <div className="controls__intro">
+          <h1>Ticket Game POC</h1>
+          <p className="controls__subtitle">
+            Round {gameId} · 6 numbers · match-count wins · FLIP sort
+          </p>
+        </div>
+        <MockTicketPreview />
       </div>
 
       <div className="controls__group">

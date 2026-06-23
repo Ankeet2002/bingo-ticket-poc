@@ -96,15 +96,15 @@ export class Ticket {
       const cell = document.createElement('div')
       cell.className = styles.cell
 
-      const ballEl = document.createElement('span')
-      ballEl.className = styles.ball
-      ballEl.textContent = String(ball)
+      const numEl = document.createElement('span')
+      numEl.className = styles.ball
+      numEl.textContent = String(ball)
 
       if (this.#hitIndices.has(index)) {
         cell.classList.add(styles.cellHit)
       }
 
-      cell.append(ballEl)
+      cell.append(numEl)
       return cell
     })
 

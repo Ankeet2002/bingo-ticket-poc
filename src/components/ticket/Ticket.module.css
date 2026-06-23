@@ -2,10 +2,10 @@
   display: inline-block;
   width: calc(25% - 12px);
   margin: 6px;
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  background: #f0ebe3;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.28);
   vertical-align: top;
   box-sizing: border-box;
 }
@@ -14,14 +14,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
-  min-height: 32px;
-  padding: 6px 10px;
-  background: #e8e2d8;
+  gap: 8px;
+  min-height: 26px;
+  padding: 5px 12px;
+  background: #e8e0d4;
 }
 
 .return {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: #3d3428;
   min-height: 1em;
@@ -31,9 +31,9 @@
 }
 
 .ticketNumber {
-  font-size: 12px;
-  font-weight: 700;
-  color: #6b6560;
+  font-size: 11px;
+  font-weight: 600;
+  color: #a8a29e;
   margin-left: auto;
   flex-shrink: 0;
 }
@@ -41,16 +41,26 @@
 .numbers {
   display: flex;
   align-items: stretch;
-  background: #fff;
+  min-height: 49px;
+  background: #faf8f5;
 }
 
 .cell {
   flex: 1;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 2px;
-  border-right: 1px solid #e5e7eb;
+  padding: 0 4px;
+}
+
+.cell:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  right: 0;
+  border-right: 1px solid #e0dbd4;
 }
 
 .cell:last-child {
@@ -58,39 +68,32 @@
 }
 
 .ball {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 24px;
-  min-height: 24px;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 700;
   color: #3d3428;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
 }
 
 .cellHit .ball {
-  border-color: #3d3428;
-  background: rgba(61, 52, 40, 0.06);
+  /* Reference design — numbers stay plain; no circle highlight */
 }
 
-/* Winning ticket — golden gradient like reference */
 .ticketWinning {
-  background: linear-gradient(180deg, #f3e4a6 0%, #e8c96a 55%, #d4ad4a 100%);
+  background: linear-gradient(180deg, #f7e48e 0%, #f0cc55 45%, #e2a832 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .ticketWinning .header {
-  background: transparent;
+  background: linear-gradient(180deg, #faf0b0 0%, #f5e08a 100%);
 }
 
 .ticketWinning .numbers {
   background: transparent;
 }
 
-.ticketWinning .cell {
-  border-right-color: rgba(61, 52, 40, 0.15);
+.ticketWinning .cell:not(:last-child)::after {
+  border-right-color: rgba(61, 52, 40, 0.18);
 }
 
 .ticketWinning .return,
@@ -99,7 +102,6 @@
   color: #3d3428;
 }
 
-.ticketWinning .cellHit .ball {
-  border-color: #3d3428;
-  background: rgba(255, 255, 255, 0.35);
+.ticketWinning .ticketNumber {
+  color: #8a847c;
 }

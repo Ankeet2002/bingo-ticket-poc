@@ -1,0 +1,85 @@
+.card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.meta {
+  margin-bottom: 14px;
+}
+
+.nodeCountRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 12px;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.nodeCount {
+  font-size: 13px;
+  color: #6ee7b7;
+}
+
+.nodeCount strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #a7f3d0;
+}
+
+.nodeCountDetail {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.title {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f3f4f6;
+}
+
+.description {
+  margin-bottom: 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: #9ca3af;
+}
+
+.description p {
+  margin: 0;
+}
+
+.description strong {
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+.description code {
+  font-size: 12px;
+  color: #c4b5fd;
+}
+
+.domHint {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #a5b4fc;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.preview {
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 10px;
+  background: #3a3a3a;
+}

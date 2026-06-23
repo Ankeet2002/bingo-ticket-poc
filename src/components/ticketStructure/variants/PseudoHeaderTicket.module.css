@@ -1,0 +1,143 @@
+.variantStack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 302px;
+}
+
+.ticket {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 302px;
+  padding-top: 26px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 3.116px 1.558px rgba(0, 0, 0, 0.42);
+  font-family: 'Onest', system-ui, sans-serif;
+}
+
+.ticket::before,
+.ticket::after {
+  position: absolute;
+  top: 0;
+  height: 26px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  pointer-events: none;
+}
+
+.ticket::before {
+  content: attr(data-return);
+  left: 6px;
+  right: 50%;
+}
+
+.ticket::after {
+  content: attr(data-ticket);
+  right: 6px;
+  left: 50%;
+  justify-content: flex-end;
+}
+
+.num {
+  flex: 1 1 calc(100% / 6);
+  min-width: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  font-size: 27px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: normal;
+  text-align: center;
+}
+
+.num:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5px;
+  height: 19px;
+  border-radius: 2px;
+}
+
+/* ——— Regular ——— */
+.normal.ticket {
+  background:
+    linear-gradient(180deg, #ffffff 0%, #f3eae0 100%) 0 26px / 100% 41px no-repeat,
+    #f8eadb;
+}
+
+.normal.ticket::before {
+  color: transparent;
+}
+
+.normal.ticket::after {
+  color: #b19797;
+}
+
+.normal .num {
+  color: #704f4f;
+}
+
+.normal .num:not(:last-child)::after {
+  background: rgba(177, 151, 151, 0.5);
+}
+
+/* ——— Win / gold ——— */
+.gold.ticket {
+  background:
+    linear-gradient(180deg, #ffe96e 0%, #ffd054 50%, #f98900 100%) 0 26px / 100% 41px
+      no-repeat,
+    linear-gradient(180deg, #fff9e0 0%, #f5e08a 100%);
+}
+
+.gold.ticket::before {
+  color: #704f4f;
+}
+
+.gold.ticket::after {
+  color: #9f8080;
+}
+
+.gold .num {
+  color: #704f4f;
+}
+
+.gold .num:not(:last-child)::after {
+  background: #cb9330;
+}
+
+/* ——— Disabled ——— */
+.disabled.ticket {
+  background:
+    linear-gradient(#0d5b58, #0d5b58) 0 26px / 100% 41px no-repeat,
+    #0a4845;
+}
+
+.disabled.ticket::before {
+  color: transparent;
+}
+
+.disabled.ticket::after {
+  color: #0f6864;
+}
+
+.disabled .num {
+  color: #193b3a;
+}
+
+.disabled .num:not(:last-child)::after {
+  background: #0a4744;
+}
